@@ -236,8 +236,16 @@ img {
 }
 
 .home__blob-img {
+    position: absolute;
     width: 360px;
+    height: auto;
+    left: 20px;
+    top: 0px; /* Decreased from 50px to move higher */
 }
+.home__blob-img :hover{
+    color: rgb(0, 78, 222);
+}
+
 
 /*BUTTONS*/
 .button {
