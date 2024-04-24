@@ -354,7 +354,7 @@ img {
 }
 
 /* ===== WORK =====*/
-.work__container {
+/* .work__container {
     row-gap: 2rem;
 }
 
@@ -370,8 +370,58 @@ img {
 
 .work__img img:hover {
     transform: scale(1.1);
+} */
+.work__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
+.work__img {
+    position: relative;
+    overflow: hidden;
+}
+
+.work__img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.but {
+    position: absolute;
+    border: 0;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1; /* Ensure the button is above the image */
+}
+.work__img p{
+    text-align: center;
+}
+
+.work__img:hover .but,
+.but:hover {
+    opacity: 1;
+}
+.work__img .but:hover{
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
+}
+
+.work__img img:hover {
+    transform: scale(1.1);
+}
 /* ===== CONTACT =====*/
 .contact__input {
     width: 100%;
@@ -398,6 +448,7 @@ img {
     cursor: pointer;
     margin: auto;
 }
+
 
 /* ===== FOOTER =====*/
 .footer {
